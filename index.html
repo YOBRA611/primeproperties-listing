@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--favicon-->
+    <link rel="icon" href="logo/real_estate_wooden_logo-removebg-preview.png">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <title>Real Estate</title>
+</head>
+<body>
+    <!--scrollbutton-->
+    <div id="progress">
+        <span id="progress-value">&#9651</span>
+    </div>
+    <!-- WhatsApp Chat Button -->
+        <a href="https://wa.me/254700073919?text=Hello%20Prime%20Axis%20I'm%20interested%20in%20your%20services" 
+            class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+            <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Chat">
+        </a>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+
+        <!-- Header / Navigation -->
+        <header class="main-header">
+            <div class="header-container">
+
+                <!-- Left Navigation -->
+                <nav class="nav-left">
+
+                <a href="#" class="active-home">Home</a>
+                <a href="#">Demos</a>
+
+                <!-- Properties Dropdown -->
+                <div class="dropdown">
+                    <button class="dropbtn">Properties<i class="fa fa-caret-down"></i></button>
+                    <ul class="dropdown-content">
+                        <li><a href="#">All Properties</a></li>
+                        <li><a href="#">Featured Listings</a></li>
+                        <li><a href="#">Luxury Homes</a></li>
+                        <li><a href="#">Commercial</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <button class="dropbtn">About<i class="fa fa-caret-down"></i></button>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Our Company</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+
+                <a href="#">Blog</a>
+
+                </nav>
+
+                <!-- Center Logo -->
+                <div class="logo">
+                <img src="logo/real_estate_wooden_logo-removebg-preview.png" alt="WP Residence Logo">
+                </div>
+
+                <!-- Right Section -->
+                <div class="nav-right">
+                <a href="#">Contact</a>
+                <a href="#">Home Valuation</a>
+                <a href="#" class="phone">
+                    <span class="icon"><i class="fa-solid fa-phone"></i></span> +2547 000 73919
+                </a>
+                </div>
+                <div class="menuToggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Slides -->
+        <div class="slide active" style="background-image: url('Image/1604ce6125047250b9518a268e02cc3d.jpg');"></div>
+        <div class="slide" style="background-image: url('Image/4b0b28e142e5281f3515fc5479a1b199.jpg');"></div>
+        <div class="slide" style="background-image: url('Image/f1595a40bcde7b8e2c92ee981ab759d3.jpg');"></div>
+        <div class="slide" style="background-image: url('Image/e23cd756f33b1be6d16f4dee92677237.jpg');"></div>
+        <div class="slide" style="background-image: url('Image/867975bf62fca0a122f908eb65d33673.jpg');"></div>
+        <div class="slide" style="background-image: url('Image/71a0c0b1d4a80bcddd37ab3d4aaf9fb9.jpg');"></div>
+        <div class="slide" style="background-image: url('Image/28c084ebe056af730cdea7444e592320.jpg');"></div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h2>Finest PrimeAxis'<br>Real Estate Properties</h2>
+        </div>
+        <!--filter section-->
+        <div class="filters">
+            <input type="text" id="search-location" placeholder="Search by location">
+            <select id="filter-type">
+                <option value="" disabled selected>Property Type</option>
+                <option value="apartment">Apartments</option>
+                <option value="commercial">Commercials</option>
+                <option value="condo">Condos</option>
+                <option value="house">Houses</option>
+                <option value="multi-family-house">Multi Family House</option>
+                <option value="office">Offices</option>
+            </select>
+
+            <select id="filter-status">
+                <option value="" disabled selected>Sell or Rent</option>
+                <option value="rent">For rent</option>
+                <option value="sell">For sell</option>
+            </select>
+
+            <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+        </div>
+    </section>
+    <!--listings-->
+    <section class="listings">
+
+        <!-- Section Header -->
+        <div class="section-header">
+            <h2>Best Listings Available</h2>
+        </div>
+
+        <!-- Categories -->
+        <div class="listing-categories">
+            <button class="cat-item">For Rent</button>
+            <button class="cat-item">For Sale</button>
+            <button class="cat-item">Apartments</button>
+            <button class="cat-item">Single Homes</button>
+            <button class="cat-item">Studios</button>
+            <button class="cat-item">Condos</button>
+            <button class="cat-item">Commercial</button>
+            <button class="cat-item">Shops</button>
+        </div>
+
+        <!-- Property Grid -->
+        <div class="property-grid">
+
+            <!-- PROPERTY CARD -->
+            <a href="#" class="property-card">
+
+            <div class="property-image">
+
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Property">
+
+                <!-- Badges -->
+                <div class="badges">
+                <span class="badge featured">Featured</span>
+                <span class="badge sale">For Sale</span>
+
+                </div>
+
+                <!-- Bottom Overlay -->
+                <div class="image-bottom">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="agent-avatar" alt="Agent">
+                <div class="wishlist">♡</div>
+                </div>
+
+            </div>
+
+            <div class="property-info">
+                <h3>$300,000</h3>
+                <h4>Villa With Panoramic View</h4>
+                <p>5 Beds | 3 Baths | 250 ft²</p>
+            </div>
+
+            </a>
+            <!-- PROPERTY CARD -->
+            <a href="#" class="property-card">
+
+            <div class="property-image">
+
+                <img src="Image/6e96ff797d03b65401bef58dd27f1ad7.jpg" alt="Property">
+
+                <!-- Badges -->
+                <div class="badges">
+                <span class="badge featured">Featured</span>
+                <span class="badge sale">For Sale</span>
+
+                </div>
+
+                <!-- Bottom Overlay -->
+                <div class="image-bottom">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="agent-avatar" alt="Agent">
+                <div class="wishlist">♡</div>
+                </div>
+
+            </div>
+
+            <div class="property-info">
+                <h3>$500,000</h3>
+                <h4>Villa With Panoramic View</h4>
+                <p>5 Beds | 3 Baths | 250 ft²</p>
+            </div>
+
+            </a>
+            <!-- PROPERTY CARD -->
+            <a href="#" class="property-card">
+
+            <div class="property-image">
+
+                <img src="Image/8f3e0ef7364fe8894cccf7861f28309c.jpg" alt="Property">
+
+                <!-- Badges -->
+                <div class="badges">
+                <span class="badge featured">Featured</span>
+                <span class="badge sale">For Sale</span>
+
+                </div>
+
+                <!-- Bottom Overlay -->
+                <div class="image-bottom">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="agent-avatar" alt="Agent">
+                <div class="wishlist">♡</div>
+                </div>
+
+            </div>
+
+            <div class="property-info">
+                <h3>$200,000</h3>
+                <h4>Villa With Panoramic View</h4>
+                <p>5 Beds | 3 Baths | 250 ft²</p>
+            </div>
+
+            </a>
+            <!-- PROPERTY CARD -->
+            <a href="#" class="property-card">
+
+            <div class="property-image">
+
+                <img src="Image/7287d64b38616f7e1f4b19653f3f6dfe.jpg" alt="Property">
+
+                <!-- Badges -->
+                <div class="badges">
+                <span class="badge featured">Featured</span>
+                <span class="badge sale">For Sale</span>
+
+                </div>
+
+                <!-- Bottom Overlay -->
+                <div class="image-bottom">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="agent-avatar" alt="Agent">
+                <div class="wishlist">♡</div>
+                </div>
+
+            </div>
+
+            <div class="property-info">
+                <h3>$500,000</h3>
+                <h4>Villa With Panoramic View</h4>
+                <p>5 Beds | 3 Baths | 250 ft²</p>
+            </div>
+
+            </a>
+            <!-- PROPERTY CARD -->
+            <a href="#" class="property-card">
+
+            <div class="property-image">
+
+                <img src="Image/519677ba7a9652b806da38ee026c57ba.jpg" alt="Property">
+
+                <!-- Badges -->
+                <div class="badges">
+                <span class="badge featured">Featured</span>
+                <span class="badge sale">For Sale</span>
+
+                </div>
+
+                <!-- Bottom Overlay -->
+                <div class="image-bottom">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="agent-avatar" alt="Agent">
+                <div class="wishlist">♡</div>
+                </div>
+
+            </div>
+
+            <div class="property-info">
+                <h3>$400,000</h3>
+                <h4>Villa With Panoramic View</h4>
+                <p>5 Beds | 3 Baths | 250 ft²</p>
+            </div>
+
+            </a>
+            <!-- PROPERTY CARD -->
+            <a href="#" class="property-card">
+
+            <div class="property-image">
+
+                <img src="Image/b0e73802cf067413a46c1516dbdf8ddc.jpg" alt="Property">
+
+                <!-- Badges -->
+                <div class="badges">
+                <span class="badge featured">Featured</span>
+                <span class="badge sale">For Sale</span>
+
+                </div>
+
+                <!-- Bottom Overlay -->
+                <div class="image-bottom">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="agent-avatar" alt="Agent">
+                <div class="wishlist">♡</div>
+                </div>
+
+            </div>
+
+            <div class="property-info">
+                <h3>$600,000</h3>
+                <h4>Villa With Panoramic View</h4>
+                <p>5 Beds | 3 Baths | 250 ft²</p>
+            </div>
+
+            </a>
+            <!-- PROPERTY CARD -->
+            <a href="#" class="property-card">
+
+            <div class="property-image">
+
+                <img src="Image/fd9f1b98bd765ffb9a2d62df2740f999.jpg" alt="Property">
+
+                <!-- Badges -->
+                <div class="badges">
+                <span class="badge featured">Featured</span>
+                <span class="badge sale">For Sale</span>
+
+                </div>
+
+                <!-- Bottom Overlay -->
+                <div class="image-bottom">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="agent-avatar" alt="Agent">
+                <div class="wishlist">♡</div>
+                </div>
+
+            </div>
+
+            <div class="property-info">
+                <h3>$500,000</h3>
+                <h4>Villa With Panoramic View</h4>
+                <p>5 Beds | 3 Baths | 250 ft²</p>
+            </div>
+
+            </a>
+            <!-- PROPERTY CARD -->
+            <a href="#" class="property-card">
+
+            <div class="property-image">
+
+                <img src="Image/1a0507707a7d9147c40026a52636331b.jpg" alt="Property">
+
+                <!-- Badges -->
+                <div class="badges">
+                <span class="badge featured">Featured</span>
+                <span class="badge sale">For Sale</span>
+
+                </div>
+
+                <!-- Bottom Overlay -->
+                <div class="image-bottom">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="agent-avatar" alt="Agent">
+                <div class="wishlist">♡</div>
+                </div>
+
+            </div>
+
+            <div class="property-info">
+                <h3>$510,000</h3>
+                <h4>Villa With Panoramic View</h4>
+                <p>5 Beds | 3 Baths | 250 ft²</p>
+            </div>
+
+            </a>
+
+        </div>
+
+    </section>
+    <!--passionate-->
+    <section class="sticky-bg">
+        <div class="bg"></div>
+            <div class="content">
+                <h2>Exclusive Homes</h2>
+                <p>Invest in prime locations.</p>
+            </div>
+        <div class="box-container">
+            <a href="">
+                <div class="box-content">
+                    <img src="Image/a2e49a3c7fee7bab8d6fd9fa0a9e6594-removebg-preview.png" class="pic">
+                    <h3>Sell Your Home</h3>
+                    <p>We do a free evaluation to be<br> sure you want to start selling.</p>
+                    <p class="read">Read More...</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="box-content">
+                    <img src="Image/6e93850965ac322d7f3bcb2386b73e28-removebg-preview.png" class="pic">
+                    <h3>Buy A Home</h3>
+                    <p>We do a free evaluation to be<br> sure you want to start selling.</p>
+                    <p class="read">Read More...</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="box-content">
+                    <img src="Image/c3245dbd73f92b431289ba2b15189b4a-removebg-preview.png" class="pic">
+                    <h3>Rent A Home</h3>
+                    <p>We do a free evaluation to be<br> sure you want to start selling.</p>
+                    <p class="read">Read More...</p>
+                </div>
+            </a>
+        </div>    
+    </section>
+    <!--featured-->
+    <section class="featured-property">
+
+        <div class="section-header">
+            <h2>Featured Properties</h2>
+            <p>With unparalleled attention to detail, superior craftsmanship, and desirable amenities, <br>each Featured Property embodies the epitome of luxury living.</p>
+        </div>
+
+        <div class="property-list">
+
+            <!-- CARD 1 -->
+            <div class="property-card">
+
+            <a href="#" class="card-link">
+                <div class="property-image">
+
+                <div class="slider">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" class="slide">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6" class="slide">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" class="slide">
+                </div>
+
+                <span class="badge-property status-active">Active</span>
+                <span class="price">$2,000 / month</span>
+
+                </div>
+
+                <div class="property-info">
+                <h3>Modern Penthouse Apartment</h3>
+                <p>2 Beds • 2.5 Baths • 250 ft²</p>
+                </div>
+            </a>
+
+            <a href="#" class="agent">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg">
+                <div class="agent-info">
+                <h4>Sarah Johnson</h4>
+                <p>Property Agent</p>
+                </div>
+            </a>
+
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="property-card">
+
+            <a href="#" class="card-link">
+                <div class="property-image">
+
+                <div class="slider">
+                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" class="slide">
+                    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" class="slide">
+                    <img src="https://images.unsplash.com/photo-1598228723793-52759bba239c" class="slide">
+                </div>
+
+                <span class="badge-property status-sold">Sold</span>
+                <span class="price">$775,000</span>
+
+                </div>
+
+                <div class="property-info">
+                <h3>Modern Home For Sale</h3>
+                <p>3 Beds • 2 Baths • 320 ft²</p>
+                </div>
+            </a>
+
+            <a href="#" class="agent">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg">
+                <div class="agent-info">
+                <h4>David Miller</h4>
+                <p>Property Agent</p>
+                </div>
+            </a>
+
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="property-card">
+
+            <a href="#" class="card-link">
+                <div class="property-image">
+
+                <div class="slider">
+                    <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154" class="slide">
+                    <img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1" class="slide">
+                    <img src="Image/8f3e0ef7364fe8894cccf7861f28309c.jpg" class="slide">
+                </div>
+
+                <span class="badge-property status-featured">Featured</span>
+                <span class="price">$1,600 / month</span>
+
+                </div>
+
+                <div class="property-info">
+                <h3>Modern Office For Rent</h3>
+                <p>4 Beds • 3 Baths • 400 ft²</p>
+                </div>
+            </a>
+
+            <a href="#" class="agent">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg">
+                <div class="agent-info">
+                <h4>Emily Carter</h4>
+                <p>Property Agent</p>
+                </div>
+            </a>
+            
+
+            </div>
+            <!-- CARD 1 -->
+            <div class="property-card">
+
+            <a href="#" class="card-link">
+                <div class="property-image">
+
+                <div class="slider">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" class="slide">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6" class="slide">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" class="slide">
+                </div>
+
+                <span class="badge-property status-active">Active</span>
+                <span class="price">$2,000 / month</span>
+
+                </div>
+
+                <div class="property-info">
+                <h3>Modern Penthouse Apartment</h3>
+                <p>2 Beds • 2.5 Baths • 250 ft²</p>
+                </div>
+            </a>
+
+            <a href="#" class="agent">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg">
+                <div class="agent-info">
+                <h4>Sarah Johnson</h4>
+                <p>Property Agent</p>
+                </div>
+            </a>
+
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="property-card">
+
+            <a href="#" class="card-link">
+                <div class="property-image">
+
+                <div class="slider">
+                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" class="slide">
+                    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" class="slide">
+                    <img src="https://images.unsplash.com/photo-1598228723793-52759bba239c" class="slide">
+                </div>
+
+                <span class="badge-property status-sold">Sold</span>
+                <span class="price">$775,000</span>
+
+                </div>
+
+                <div class="property-info">
+                <h3>Modern Home For Sale</h3>
+                <p>3 Beds • 2 Baths • 320 ft²</p>
+                </div>
+            </a>
+
+            <a href="#" class="agent">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg">
+                <div class="agent-info">
+                <h4>David Miller</h4>
+                <p>Property Agent</p>
+                </div>
+            </a>
+
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="property-card">
+
+            <a href="#" class="card-link">
+                <div class="property-image">
+
+                <div class="slider">
+                    <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154" class="slide">
+                    <img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1" class="slide">
+                    <img src="Image/8f3e0ef7364fe8894cccf7861f28309c.jpg" class="slide">
+                </div>
+
+                <span class="badge-property status-featured">Featured</span>
+                <span class="price">$1,600 / month</span>
+
+                </div>
+
+                <div class="property-info">
+                <h3>Modern Office For Rent</h3>
+                <p>4 Beds • 3 Baths • 400 ft²</p>
+                </div>
+            </a>
+
+            <a href="#" class="agent">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg">
+                <div class="agent-info">
+                <h4>Emily Carter</h4>
+                <p>Property Agent</p>
+                </div>
+            </a>
+            
+
+            </div>
+
+        </div>
+
+    </section>
+    <!--about-->
+    <section class="agent-section">
+
+        <div class="agent-image">
+            <img src="Image/057869dc6c97ffa896d25a9641887381.jpg" alt="Agent">
+        </div>
+
+        <div class="agent-card">
+            <h2>Meet Brian O</h2>
+            <p>
+            With over $2 billion in sales, our agency is the industry’s top luxury producer
+            with over 27 years of experience in marketing Seattle’s most prestigious
+            waterfront properties.
+            </p>
+
+            <p>
+            With over $2 billion in sales, our agency is the industry’s top luxury producer
+            with over 27 years of experience in marketing Seattle’s most prestigious
+            waterfront properties.
+            </p>
+
+            <div class="signature">Brian O</div>
+        </div>
+
+    </section>
+    <!--counter-->
+    <section class="counter-up">
+         <h2 class="counter-heading">The Finest Services</h2>
+        <ul class="counter">
+            <li class="fig">
+            <img src="Image/a2e49a3c7fee7bab8d6fd9fa0a9e6594-removebg-preview.png" class="pic">
+            <span class="digits" data-target="3000">0</span>
+            <span class="texts">+<br>Current Listing Volume</span>
+            </li>
+            <li class="fig">
+            <img src="Image/6e93850965ac322d7f3bcb2386b73e28-removebg-preview.png" class="pic">
+            <span class="digits" data-target="1000">0</span>
+            <span class="texts">+<br>Total Sold 2020 - 2026</span>
+            </li>
+            <li class="fig">
+            <img src="Image/c3245dbd73f92b431289ba2b15189b4a-removebg-preview.png" class="pic">
+            <span class="digits" data-target="1500">0</span>
+            <span class="texts">+<br>Lifetime Sales Volume</span>
+            </li>
+            <li class="fig">
+            <img src="Image/2504fff4e9d68cd86fc1bcf33ca58afb-removebg-preview.png" class="pic">
+            <span class="digits" data-target="1500">0</span>
+            <span class="texts">+<br>Current Listing Volume</span>
+            </li>
+        </ul>
+    </section>
+    <!--Testimonial-->
+    <section class="slideshow-container">
+        <h1 class="core-heading">Client's Say</h1>
+        <div class="mySlides">
+           <p>"We’ve been using Sparkle Cleaning Servives for our office cleaning, and the difference is remarkable. The team is professional, reliable, and always leaves the space spotless. Highly recommended."
+           </p>
+
+           <div class="detail">
+                <span class="name">— Kibet E.,</span>
+                <span class="job">Office manager</span>
+                <span class="org">Commercial Client</span>
+           </div>
+        </div>
+
+         <div class="mySlides">
+           <p>
+            "Their attention to detail is impressive. Our home feels fresh and welcoming after every visit. The staff is friendly, punctual, and very thorough."
+           </p>
+
+           <div class="detail">
+                <span class="name">— Kimani,</span>
+                <span class="job">Residential Client</span>
+           </div>
+        </div>
+
+         <div class="mySlides">
+           <p>
+            "Sparkle Cleaning Servives has been consistent and dependable. They understand our cleaning needs and deliver quality work every time. We truly trust their services."
+           </p>
+
+           <div class="detail">
+                <span class="job">Business Owner</span>
+           </div>
+        </div>
+
+
+        <!-- Next/prev buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </section>
+    <!-- Dots/bullets/indicators -->
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <!--destination-->
+    <section class="destination">
+
+        <div class="destination-container">
+
+            <!-- LEFT CONTENT -->
+            <div class="destination-text">
+
+            <h1>
+            Your digital presence is <br>
+            about to take off
+            <span class="highlight">Prime Axis</span>
+            </h1>
+
+            <p>
+            Welcome to our blog, your go-to destination for all things real estate and beyond.
+            Join us as we explore the exciting world of real estate together and unlock
+            the keys to your dream home.
+            </p>
+
+            <div class="destination-buttons">
+
+            <a href="#" class="btn-outline">CONTACT US</a>
+
+            <span class="or">OR</span>
+
+            <a href="#" class="btn-outline">SEARCH LISTINGS</a>
+
+            </div>
+
+            </div>
+
+
+            <!-- RIGHT IMAGES -->
+            <div class="destination-images">
+
+            <div class="img-large">
+            <img src="Image/b9d675b673d0176a23be066d66a20a88.jpg" alt="">
+            </div>
+
+            <div class="img-right">
+
+            <div class="img-small">
+            <img src="Image/2fa039c8889bc3b57c190fccfc253fbb.jpg" alt="">
+            </div>
+
+            <div class="img-small">
+            <img src="Image/fd9f1b98bd765ffb9a2d62df2740f999.jpg" alt="">
+            </div>
+
+            </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!--footer-->
+    <footer class="footer">
+
+    <div class="footer-container">
+
+    <!-- Column 1 -->
+    <div class="footer-col footer-brand">
+
+    <div class="logo">
+    <span><img src="logo/real_estate_wooden_logo-removebg-preview.png" alt="WP Residence Logo"></span><h3>PRIME AXIS</h3>
+    </div>
+
+    <p>
+    All information is deemed reliable but not guaranteed and should be independently reviewed and verified.
+    </p>
+
+    </div>
+
+
+    <!-- Column 2 -->
+    <div class="footer-col">
+    <h4>Visit Us</h4>
+    <p>Lavington, 12056 </p>
+    <p>Tel: +254700073919</p>
+    </div>
+
+
+    <!-- Column 3 -->
+    <div class="footer-col">
+    <h4>Working Hours</h4>
+    <p>Monday – Friday</p>
+    <p>09:00 am – 09:00 pm</p>
+    <p>Saturday – Sunday – Closed</p>
+    </div>
+
+
+    <!-- Column 4 -->
+    <div class="footer-col">
+    <h4>Quick Links</h4>
+    <ul>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">List with Us</a></li>
+    </ul>
+    </div>
+
+    </div>
+
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom">
+
+    <p>© All rights reserved. Crafted @  <a href="https://wa.me/254700073919?text=Hello%20I%20am%20interested%20in%20your%20services">Brydex Technologies</p>
+
+    <div class="footer-links">
+    <a href="#">Terms of Use</a>
+    <a href="#">Privacy Policy</a>
+    </div>
+
+    <div class="social-icons">
+    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="#"><i class="fa-brands fa-telegram"></i></a>
+    </div>
+
+    </div>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1500, once: true });
+        document.addEventListener("DOMContentLoaded", function () {
+
+        const menuToggle = document.querySelector(".menuToggle");
+        const navLeft = document.querySelector(".nav-left");
+        const navRight = document.querySelector(".nav-right");
+        const dropdowns = document.querySelectorAll(".dropdown");
+
+        menuToggle.addEventListener("click", function () {
+            navLeft.classList.toggle("active");
+            navRight.classList.toggle("active");
+            this.classList.toggle("open");
+        });
+
+        dropdowns.forEach(function (drop) {
+            const btn = drop.querySelector(".dropbtn");
+
+            btn.addEventListener("click", function (e) {
+            if (window.innerWidth > 992) return;
+            e.preventDefault();
+            drop.classList.toggle("active");
+            });
+        });
+
+        });
+
+        const header = document.querySelector(".main-header");
+
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 80) {
+            header.classList.add("scrolled");
+            } else {
+            header.classList.remove("scrolled");
+            }
+        });
+
+        let calcScrollValue = () => {
+        let scrollProgress = document.getElementById("progress");
+        let progressValue = document.getElementById("progress-value");
+        let pos = document.documentElement.scrollTop;
+        let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrollValue = Math.round((pos * 100)/calcHeight);
+            if (pos > 100) {
+                scrollProgress.style.display = "grid";
+            } else {
+                scrollProgress.style.display = "none";
+            }
+            scrollProgress.addEventListener("click", () => {
+                document.documentElement.scrollTop = 0;
+            });
+            scrollProgress.style.background = `conic-gradient(#c8a74e ${scrollValue}%, white ${scrollValue}%)`;
+        };
+
+        window.onscroll = calcScrollValue;
+        window.onload = calcScrollValue;
+
+        const slides = document.querySelectorAll('.slide');
+        let current = 0;
+        function nextSlide(){
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+        }
+        setInterval(nextSlide, 5000);
+
+        const counters = document.querySelectorAll('.digits');
+
+        counters.forEach(counter => {
+        const updateCount = () => {
+            const target = parseFloat(counter.getAttribute('data-target'));
+            let count = parseFloat(counter.innerText);
+
+            // decimal handling
+            let increment = target / 100;
+
+            if(count < target) {
+            count += increment;
+            if(target % 1 !== 0) {
+                counter.innerText = count.toFixed(1);
+            } else {
+                counter.innerText = Math.ceil(count);
+            }
+            setTimeout(updateCount, 30);
+            } else {
+            counter.innerText = target;
+            }
+        }
+
+        updateCount();
+        });
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+    </script>
+</body>
+</html>
